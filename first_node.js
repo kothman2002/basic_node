@@ -75,9 +75,12 @@ try {
 
 // const append_text=fs.writeFileSync("example.txt","Welcome to file operations!","utf-8");
 // console.log(append_text);
-try {
-    const append_text=fs.writeFileSync("example.txt", "Welcome to file operations!", "utf-8");
-    console.log(append_text);
-} catch (err) {
-    console.error("Error writing to the file:", err.message);
-}
+// try {
+//     const append_text=fs.writeFileSync("example.txt", "Welcome to file operations!", "utf-8");
+//     console.log(append_text);
+// } catch (err) {
+//     console.error("Error writing to the file:", err.message);
+// }
+fs.appendFileSync("NewFile.txt","this file didn't exist before","utf-8")
+const newText=fs.readFileSync("NewFile.txt","utf-8")
+console.log("new text",newText)
